@@ -5,7 +5,7 @@ import '../models/game_model.dart';
 class ApiService {
   static const String _baseUrl = 'https://kitsu.io/api/edge';
 
-  /// Mengambil daftar semua anime (20 anime pertama)
+
   static Future<List<Game>> getGames() async {
     final uri = Uri.parse('$_baseUrl/anime/?page[limit]=20&page[offset]=0');
     final response = await http.get(

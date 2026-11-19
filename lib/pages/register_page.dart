@@ -1,17 +1,6 @@
 import 'package:flutter/material.dart';
 import '../storage/auth_storage.dart';
 
-/// ============================================================================
-/// [OPSI SOAL SI-A / VARIASI RESPONSI: HALAMAN REGISTER]
-/// ============================================================================
-/// Soal Plug SI-A meminta:
-/// "1. Halaman Register dan Login dengan penggunaan local database"
-/// 
-/// Halaman ini sudah siap pakai jika besok pengawas meminta fitur Register!
-/// Untuk mengaktifkan navigasi ke halaman ini, cukup uncomment tombol register
-/// di bagian bawah `login_page.dart`.
-/// ============================================================================
-
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
 
@@ -22,7 +11,8 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
   bool _obscurePassword = true;
   bool _isLoading = false;
 
@@ -86,7 +76,10 @@ class _RegisterPageState extends State<RegisterPage> {
       appBar: AppBar(
         backgroundColor: const Color(0xFF1E1E1E),
         elevation: 0,
-        title: const Text('Register Akun', style: TextStyle(color: Colors.white)),
+        title: const Text(
+          'Register Akun',
+          style: TextStyle(color: Colors.white),
+        ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context),
@@ -95,7 +88,10 @@ class _RegisterPageState extends State<RegisterPage> {
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 24.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 28.0,
+              vertical: 24.0,
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -125,12 +121,17 @@ class _RegisterPageState extends State<RegisterPage> {
                   controller: _usernameController,
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    prefixIcon: const Icon(Icons.person_outline, color: Colors.white70),
+                    prefixIcon: const Icon(
+                      Icons.person_outline,
+                      color: Colors.white70,
+                    ),
                     labelText: 'Username / Email',
                     labelStyle: const TextStyle(color: Colors.white60),
                     filled: true,
                     fillColor: const Color(0xFF1E1E1E),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -141,19 +142,27 @@ class _RegisterPageState extends State<RegisterPage> {
                   obscureText: _obscurePassword,
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    prefixIcon: const Icon(Icons.lock_outline, color: Colors.white70),
+                    prefixIcon: const Icon(
+                      Icons.lock_outline,
+                      color: Colors.white70,
+                    ),
                     suffixIcon: IconButton(
                       icon: Icon(
-                        _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                        _obscurePassword
+                            ? Icons.visibility_off
+                            : Icons.visibility,
                         color: Colors.white60,
                       ),
-                      onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
+                      onPressed: () =>
+                          setState(() => _obscurePassword = !_obscurePassword),
                     ),
                     labelText: 'Password',
                     labelStyle: const TextStyle(color: Colors.white60),
                     filled: true,
                     fillColor: const Color(0xFF1E1E1E),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -164,12 +173,17 @@ class _RegisterPageState extends State<RegisterPage> {
                   obscureText: _obscurePassword,
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    prefixIcon: const Icon(Icons.lock_reset, color: Colors.white70),
+                    prefixIcon: const Icon(
+                      Icons.lock_reset,
+                      color: Colors.white70,
+                    ),
                     labelText: 'Konfirmasi Password',
                     labelStyle: const TextStyle(color: Colors.white60),
                     filled: true,
                     fillColor: const Color(0xFF1E1E1E),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 24),
@@ -183,11 +197,16 @@ class _RegisterPageState extends State<RegisterPage> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF2196F3),
                       foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
                     child: _isLoading
                         ? const CircularProgressIndicator(color: Colors.white)
-                        : const Text('DAFTAR', style: TextStyle(fontWeight: FontWeight.bold)),
+                        : const Text(
+                            'DAFTAR',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
                   ),
                 ),
               ],

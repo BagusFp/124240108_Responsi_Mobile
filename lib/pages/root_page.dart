@@ -3,15 +3,6 @@ import 'home_page.dart';
 import 'favorite_page.dart';
 import 'profile_page.dart';
 
-/// ============================================================================
-/// [ROOT PAGE: BOTTOM NAVIGATION BAR] (Sesuai Kriteria & Mockup Soal SI-B)
-/// ============================================================================
-/// Tiga halaman utama:
-/// 1. Beranda (HomePage)
-/// 2. Library (FavoritePage)
-/// 3. Profil (ProfilePage)
-/// ============================================================================
-
 class RootPage extends StatefulWidget {
   const RootPage({super.key});
 

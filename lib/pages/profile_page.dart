@@ -133,9 +133,6 @@ class _ProfilePageState extends State<ProfilePage> {
 
             const SizedBox(height: 30),
 
-            // -----------------------------------------------------------------
-            // [FITUR BONUS LBS & NOTIFIKASI] (Poin Tambahan Sesuai Aturan Responsi)
-            // -----------------------------------------------------------------
             Card(
               color: const Color(0xFF1E1E1E),
               shape: RoundedRectangleBorder(

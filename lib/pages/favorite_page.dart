@@ -215,26 +215,6 @@ class _FavoritePageState extends State<FavoritePage> {
                   ),
                 );
 
-                // =============================================================
-                // [OPSI SOAL SI-A: HAPUS DENGAN SWIPE (DISMISSIBLE)]
-                // Jika soal besok meminta "Bookmark bisa dihapus dengan swipe",
-                // ganti "return itemCard;" dengan blok Dismissible di bawah:
-                /*
-                return Dismissible(
-                  key: Key('game_${game.id}_$index'),
-                  direction: DismissDirection.endToStart,
-                  background: Container(
-                    alignment: Alignment.centerRight,
-                    padding: const EdgeInsets.only(right: 20),
-                    color: Colors.redAccent,
-                    child: const Icon(Icons.delete, color: Colors.white),
-                  ),
-                  onDismissed: (direction) => _deleteFavorite(index, game),
-                  child: itemCard,
-                );
-                */
-                // =============================================================
-
                 return itemCard;
               },
             ),
